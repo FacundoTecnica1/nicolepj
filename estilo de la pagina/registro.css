@@ -1,0 +1,402 @@
+:root {
+    --pink-light: #FFC0CB; 
+    --pink-dark: #FF69B4; 
+    --pink-very-light: #fef0f4; 
+    --bg-dark: #330033; 
+    --shadow-light: rgba(0, 0, 0, 0.1); 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--pink-very-light);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-grow: 1; 
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px var(--shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--pink-dark);
+}
+
+.logo-shield {
+    margin-right: 5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #f0f0f0;
+}
+
+.active-session {
+    background-color: var(--pink-light);
+    color: #333 !important;
+    padding: 8px 18px;
+    box-shadow: 0 2px 5px rgba(255, 192, 203, 0.5);
+    font-weight: bold;
+}
+
+.cart-button {
+    background-color: var(--pink-dark);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.cart-count {
+    background-color: red;
+    border-radius: 50%;
+    padding: 2px 6px;
+    margin-left: 5px;
+    font-size: 0.7rem;
+}
+.hero-section-wrapper {
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, var(--pink-very-light) 0%, var(--pink-light) 100%);
+    border-radius: 15px;
+}
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    color: var(--pink-dark);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-main, .btn-add-to-cart {
+    background: linear-gradient(90deg, #FF99AA, var(--pink-dark));
+    color: white;
+    margin-top: 20px;
+}
+
+.product-section {
+    text-align: center;
+}
+
+.product-info-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: var(--pink-dark);
+    font-weight: bold;
+    margin-top: 10px;
+}
+.section-title {
+    text-align: center;
+    color: var(--pink-dark);
+    margin: 40px 0 20px;
+}
+
+.review-form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.form-layout-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px;
+}
+
+.form-group-textarea textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--pink-light);
+    border-radius: 8px;
+    box-sizing: border-box;
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.field-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.field-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.btn-submit-review {
+    background: linear-gradient(90deg, #FF99AA, var(--pink-dark));
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    margin-top: auto; 
+}
+
+.auth-main {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    margin: 0;
+}
+
+.auth-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-container h3 {
+    color: var(--pink-dark);
+    margin-bottom: 25px;
+}
+
+.auth-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.btn-main-auth {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #FF99AA, var(--pink-dark));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.switch-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.footer {
+    background-color: var(--bg-dark);
+    color: #f0f0f0;
+    padding: 30px 50px;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 20px;
+}
+
+.footer-column h4 {
+    color: var(--pink-light);
+    border-bottom: 2px solid var(--pink-light);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+.auth-main {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    margin: 0;
+    flex-grow: 1; 
+}
+
+.auth-container {
+    /* El recuadro blanco del formulario, coincidiendo con la imagen */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* * Contenedores de Vistas: Esto es crucial. 
+ * Ambos contenedores deben heredar los estilos de form-group y input.
+ * El JavaScript controlará el display: block/none.
+ */
+#loginView, #registerView {
+    text-align: left; /* Alineamos los labels a la izquierda */
+}
+
+/* Estilos de título */
+#loginView h3, #registerView h2 {
+    color: var(--pink-dark);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Estilo para cada grupo de label/input */
+.form-group, 
+.caja-formulario .form-group, /* La clase caja-formulario tiene los mismos grupos */
+.caja-formulario label,
+#registerView label { 
+    margin-bottom: 15px;
+    text-align: left;
+    display: block; /* Asegura que el label ocupe su propia línea */
+    font-weight: 500;
+}
+
+/* Estilo para todos los inputs dentro de los formularios */
+#loginView input, 
+#registerView input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Crucial para que el padding no desborde el ancho */
+    margin-top: 5px;
+}
+
+/* Botones de envío */
+.btn-main-auth {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #FF99AA, var(--pink-dark));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.switch-link, .caja-formulario p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    text-align: center; /* Centramos el enlace de cambio de vista */
+}
+/* Estilo para el mensaje de bienvenida */
+.welcome-message {
+    color: #333;
+    margin-right: 20px;
+    font-weight: bold;
+    /* Ajusta el color si es necesario */
+}
+
+/* Estilo para el botón de Cerrar Sesión */
+.logout-button {
+    background-color: #dc3545; /* Rojo para alertar que cierra sesión */
+    color: white !important;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}

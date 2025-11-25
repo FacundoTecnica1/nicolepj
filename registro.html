@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso - SecurityShop</title>
+    <link rel="stylesheet" href="estilo de la pagina/registro.css"> 
+
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-shield">🛡️</span> SecurityShop
+        </div>
+        <nav class="nav-links">
+            <a href="index.php">Inicio</a> 
+            <a href="#">Productos</a>
+            <a href="registro.html" class="nav-button active-session">Sesión/Registrar</a>
+        </nav>
+       
+<div class="cart-button-container">
+    <a href="ver_carrito.php" class="cart-button">
+        <span class="icon-carro">🛒</span> Carrito <span class="cart-count">0</span>
+    </a>
+</div>
+        
+</header>
+                
+        
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-container">
+            
+            <div id="loginView" style="display:none;">
+                <h3>Iniciar Sesión</h3>
+                <form action="php de la pagina/login.php" method="POST">
+                    <div class="form-group">
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="login-email" name="correo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Contraseña:</label>
+                        <input type="password" id="login-password" name="contrasena" required>
+                    </div>
+                    <button type="submit" class="btn btn-main-auth">Entrar</button>
+                </form>
+                <p class="switch-link">¿No tienes cuenta? <a href="#" id="showRegister">Regístrate aquí</a></p>
+            </div>
+
+            <div class="caja-formulario" id="registerView">
+                <h2>Crear Cuenta</h2>
+                
+                <form action="php de la pagina/registro.php" method="POST">
+                    
+                    <label for="nombre_completo">Nombre Completo:</label>
+                    <input type="text" 
+                           id="nombre_completo" 
+                           name="nombre_completo" 
+                           required>
+                    
+                    <label for="email">Email:</label>
+<input type="email" id="email" name="correo" required>  
+                    
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" 
+                           id="contrasena" 
+                           name="contrasena" 
+                           required>
+                    
+                    <button type="submit" class="btn btn-main-auth">
+                        Registrarse
+                    </button>
+                    
+                    <p>¿Ya tienes cuenta? <a href="#" id="showLogin">Inicia Sesión</a></p>
+                </form>
+            </div>
+
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Proyecto con dos materias departamentales</h4>
+                <ul><li>Base de Datos</li><li>Diseño de base de Datos</li></ul>
+            </div>
+            <div class="footer-column">
+                <h4>Integrantes</h4>
+                <ul><li>Nicole Roglich</li><li>Abril Verón</li><li>Marcos Quiroz</li><li>Thomas Schulthes</li></ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        var loginView = document.getElementById("loginView");
+        var registerView = document.getElementById("registerView"); 
+        var showRegisterLink = document.getElementById("showRegister");
+        var showLoginLink = document.getElementById("showLogin");
+
+        window.onload = function() {
+            if (loginView && registerView) {
+                loginView.style.display = "none";
+                registerView.style.display = "block";
+            }
+        }
+        
+        if (showRegisterLink) {
+            showRegisterLink.onclick = function(e) {
+                e.preventDefault(); 
+                loginView.style.display = "none";
+                registerView.style.display = "block";
+            }
+        }
+
+        if (showLoginLink) {
+            showLoginLink.onclick = function(e) {
+                e.preventDefault();
+                registerView.style.display = "none";
+                loginView.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

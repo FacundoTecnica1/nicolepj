@@ -1,0 +1,217 @@
+/* === HEREDA LA PALETA DEL INDEX === */
+:root {
+  --blue-light: #AEE8FF;
+  --blue-medium: #5EC6E8;
+  --blue-dark: #1E88E5;
+  --pink-light: #FFCCE5;
+  --pink-medium: #FF80AB;
+  --pink-dark: #E91E63;
+  --white: #ffffff;
+  --gray-dark: #333;
+  --gray-light: #777;
+  --footer-bg: #12263A;
+}
+
+/* === ESTILO GENERAL === */
+body.carrito-page {
+  background: linear-gradient(180deg, var(--pink-light) 0%, var(--blue-light) 100%);
+  color: var(--gray-dark);
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* === NAVBAR (igual que index) === */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--pink-dark);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.logo-shield {
+  font-size: 1.8rem;
+  margin-right: 8px;
+  color: var(--blue-dark);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--gray-dark);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--blue-dark);
+}
+
+.welcome-message {
+  color: var(--pink-dark);
+  font-weight: 600;
+}
+
+.nav-button {
+  background: linear-gradient(90deg, var(--blue-medium), var(--pink-dark));
+  color: var(--white);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(30, 136, 229, 0.25);
+}
+
+/* === TÍTULO PRINCIPAL === */
+.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  color: var(--blue-dark);
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+/* === LISTA DE PRODUCTOS DEL CARRITO === */
+.carrito-list {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  background-color: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--blue-light);
+  padding: 15px 0;
+  transition: background 0.3s;
+}
+
+.carrito-item:hover {
+  background: linear-gradient(90deg, var(--pink-light) 0%, var(--blue-light) 100%);
+}
+
+.carrito-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.item-name {
+  flex: 1;
+  margin-left: 20px;
+  font-weight: 600;
+  color: var(--pink-dark);
+}
+
+.item-price, .item-quantity, .item-subtotal {
+  font-weight: 600;
+  color: var(--gray-dark);
+  margin-left: 15px;
+}
+
+/* === TOTAL DEL CARRITO === */
+.carrito-resumen {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto 60px;
+  background: linear-gradient(90deg, var(--blue-medium), var(--pink-medium));
+  padding: 25px 30px;
+  border-radius: 20px;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.carrito-total {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.carrito-total span {
+  font-size: 1.6rem;
+  color: var(--white);
+}
+
+/* === BOTÓN PRINCIPAL === */
+.btn-main-checkout {
+  border: none;
+  background: linear-gradient(90deg, var(--pink-dark), var(--blue-dark));
+  color: var(--white);
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-main-checkout:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(30, 136, 229, 0.4);
+}
+
+/* === MENSAJES VACÍO / LOGIN === */
+.empty-cart-message, .login-prompt p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--gray-dark);
+}
+
+.btn.btn-main {
+  display: block;
+  margin: 20px auto;
+  background: linear-gradient(90deg, var(--blue-dark), var(--pink-dark));
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.btn.btn-main:hover {
+  transform: scale(1.05);
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}

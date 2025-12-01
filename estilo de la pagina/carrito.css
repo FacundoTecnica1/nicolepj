@@ -215,3 +215,163 @@ body.carrito-page {
   font-size: 0.9rem;
   margin-top: 60px;
 }
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .carrito-list,
+  .carrito-resumen {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .carrito-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px 0;
+  }
+
+  .carrito-item img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+  }
+
+  .item-name {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .item-price,
+  .item-quantity,
+  .item-subtotal {
+    margin-left: 0;
+  }
+
+  .carrito-resumen {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .carrito-total {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .btn-main-checkout {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+    margin-top: 30px;
+  }
+
+  .carrito-list,
+  .carrito-resumen {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .carrito-item img {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .item-name {
+    font-size: 1rem;
+  }
+
+  .item-price,
+  .item-quantity,
+  .item-subtotal {
+    font-size: 0.9rem;
+  }
+
+  .carrito-total {
+    font-size: 1rem;
+  }
+
+  .carrito-total span {
+    font-size: 1.3rem;
+  }
+
+  .btn-main-checkout {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .empty-cart-message,
+  .login-prompt p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .success-message-box,
+  .error-message-box {
+    width: 95%;
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  /* Botones más grandes para dedos */
+  .btn,
+  .btn-main,
+  .btn-add-to-cart,
+  .nav-button {
+    min-height: 44px; /* Tamaño recomendado por Apple para táctil */
+    padding: 12px 20px;
+  }
+
+  /* Links más espaciados */
+  a {
+    padding: 10px;
+  }
+
+  /* Evitar zoom al hacer tap en inputs (iOS) */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* ============================================
+   ORIENTACIÓN HORIZONTAL EN MÓVILES
+   ============================================ */
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

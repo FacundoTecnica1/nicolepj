@@ -385,3 +385,187 @@ body {
 .review-date {
   color: var(--gray-light);
 }
+/* Tablets y pantallas medianas (768px o menos) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .cart-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Productos en 2 columnas */
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .product-section {
+    padding: 30px 20px;
+  }
+}
+
+/* Celulares (480px o menos) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .logo-shield {
+    font-size: 1.3rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .nav-button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .cart-button {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+  }
+
+  /* Productos en 1 columna */
+  .product-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-info-card {
+    padding: 20px;
+  }
+
+  .product-name {
+    font-size: 1.2rem;
+  }
+
+  .product-price {
+    font-size: 1.1rem;
+  }
+
+  .product-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  /* Formulario de reseñas */
+  .review-form-section {
+    padding: 20px 15px;
+  }
+
+  .form-layout-grid {
+    gap: 15px;
+  }
+
+  .form-group-side {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn-submit-review {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  /* Lista de reseñas */
+  .reviews-display-section {
+    padding: 20px 15px;
+  }
+
+  .review-card {
+    padding: 15px 20px;
+  }
+
+  .review-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 15px 10px;
+    font-size: 0.8rem;
+  }
+
+  /* Inputs más grandes para móvil */
+  input[type="number"] {
+    font-size: 16px; /* Evita zoom en iOS */
+    padding: 10px;
+  }
+
+  textarea {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  /* Botones más grandes para dedos */
+  .btn,
+  .btn-main,
+  .btn-add-to-cart,
+  .nav-button {
+    min-height: 44px; /* Tamaño recomendado por Apple para táctil */
+    padding: 12px 20px;
+  }
+
+  /* Links más espaciados */
+  a {
+    padding: 10px;
+  }
+
+  /* Evitar zoom al hacer tap en inputs (iOS) */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* ============================================
+   ORIENTACIÓN HORIZONTAL EN MÓVILES
+   ============================================ */
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

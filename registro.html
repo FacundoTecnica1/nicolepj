@@ -3,31 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso - SecurityShop</title>
+    <title>Acceso - Margarita's Cerámicas</title>
     <link rel="stylesheet" href="estilo de la pagina/registro.css"> 
-
 </head>
 <body>
 
     <header class="navbar">
         <div class="logo">
-            <span class="logo-shield">🛡️</span> SecurityShop
+            <span class="logo-shield">🌼</span>
+            <span class="logo-text">Margarita's Cerámicas</span>
         </div>
         <nav class="nav-links">
             <a href="index.php">Inicio</a> 
-            <a href="#">Productos</a>
             <a href="registro.html" class="nav-button active-session">Sesión/Registrar</a>
         </nav>
        
-<div class="cart-button-container">
-    <a href="ver_carrito.php" class="cart-button">
-        <span class="icon-carro">🛒</span> Carrito <span class="cart-count">0</span>
-    </a>
-</div>
-        
-</header>
-                
-        
+        <div class="cart-button-container">
+            <a href="php de la pagina/ver_carrito.php" class="cart-button">
+                <span class="icon-carro">🛒</span> Carrito <span class="cart-count">0</span>
+            </a>
+        </div>
     </header>
 
     <main class="auth-main">
@@ -61,7 +56,7 @@
                            required>
                     
                     <label for="email">Email:</label>
-<input type="email" id="email" name="correo" required>  
+                    <input type="email" id="email" name="correo" required>  
                     
                     <label for="contrasena">Contraseña:</label>
                     <input type="password" 
@@ -83,16 +78,10 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-column">
-                <h4>Proyecto con dos materias departamentales</h4>
-                <ul><li>Base de Datos</li><li>Diseño de base de Datos</li></ul>
-            </div>
-            <div class="footer-column">
-                <h4>Integrantes</h4>
-                <ul><li>Nicole Roglich</li><li>Abril Verón</li><li>Marcos Quiroz</li><li>Thomas Schulthes</li></ul>
+                <h4>Nicole Roglich - 5to 3ra - Redes Informáticas</h4>
             </div>
         </div>
     </footer>
-
 
     <script>
         var loginView = document.getElementById("loginView");
